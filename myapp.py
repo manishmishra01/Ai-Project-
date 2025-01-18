@@ -6,7 +6,8 @@ import streamlit as st
 # Load environment variables
 load_dotenv()
 # Initialize Groq client
-api_key = os.getenv('GROQ_API_KEY')
+# api_key = os.getenv('GROQ_API_KEY')
+api_key = st.secrets["GROQ_API_KEY"]
 client = Groq(api_key=api_key)
 def generate_linkedin_post(project_name, project_description, key_features, tech_stack):
     # Create prompt template
