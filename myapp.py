@@ -1,10 +1,9 @@
 import os
-from dotenv import load_dotenv
+
 from groq import Groq
 from langchain.prompts import PromptTemplate
 import streamlit as st
 # Load environment variables
-load_dotenv()
 # Initialize Groq client
 # api_key = os.getenv('GROQ_API_KEY')
 api_key = st.secrets["GROQ_API_KEY"]
